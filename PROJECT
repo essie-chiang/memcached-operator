@@ -1,0 +1,6 @@
+domain: example.com
+layout: go.kubebuilder.io/v2
+repo: github.com/essie-chiang/memcached-operator
+version: 3-alpha
+plugins:
+  go.operator-sdk.io/v2-alpha: {}
