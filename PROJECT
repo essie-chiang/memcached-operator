@@ -1,6 +1,19 @@
 domain: example.com
-layout: go.kubebuilder.io/v2
-repo: github.com/essie-chiang/memcached-operator
-version: 3-alpha
+layout:
+- go.kubebuilder.io/v3
 plugins:
-  go.operator-sdk.io/v2-alpha: {}
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: memcached-operator
+repo: github.com/essie-chiang/memcached-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: cache
+  kind: Memcached
+  path: github.com/essie-chiang/memcached-operator/api/v1alpha1
+  version: v1alpha1
+version: "3"
