@@ -41,6 +41,7 @@ type MemcachedReconciler struct {
 // +kubebuilder:rbac:groups=cache.example.com,resources=memcacheds/status,verbs=get;update;patch
 // +kubebuilder:rbac:groups=apps,resources=deployments,verbs=get;list;watch;create;update;patch;delete
 // +kubebuilder:rbac:groups=core,resources=pods,verbs=get;list;watch
+//+kubebuilder:rbac:groups=cache.example.com,resources=memcacheds/finalizers,verbs=update
 
 func (r *MemcachedReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
 
